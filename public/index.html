@@ -11,9 +11,9 @@
 
 <div id="container">
   <h1>¿Quieres ser mi novia? <3</h1>
-  <button id="btnNo" onmouseover="moveButton()" onclick="recordChoice('No')">No</button>
-  <button id="btnYes" onclick="recordChoice('Sí')">Sí</button>
-  <p id="result">Sabía que dirías que sí (: </p>
+  <button id="btnNo" onmouseover="moveButton()">No</button>
+  <button id="btnYes" onclick="showMessage()">Sí</button>
+  <p id="result" style="display: none;">Sabía que dirías que sí (: </p>
 </div>
 
 <script>
@@ -25,31 +25,9 @@
     btnNo.disabled = true;
   }
 
-  async function recordChoice(choice) {
-    
-    try {
-      const response = await fetch(`/recordChoice`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `choice=${choice}`
-      });
-
-      if (response.ok) {
-        
-        if (choice === 'Sí') {
-          window.location.href = '/confirmation.html';
-        } else {
-          const result = document.getElementById('result');
-          result.style.display = 'block';
-        }
-      } else {
-        console.error('Error al enviar la elección al servidor.');
-      }
-    } catch (error) {
-      console.error('Error de red:', error);
-    }
+  function showMessage() {
+    const result = document.getElementById('result');
+    result.style.display = 'block';
   }
 </script>
 
