@@ -1,3 +1,4 @@
+/* BODY */
 body {
   font-family: 'Comic Sans MS', 'Arial', sans-serif; /* más juguetona y tierna */
   background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* degradado romántico */
@@ -10,6 +11,7 @@ body {
   height: 100vh;
 }
 
+/* CONTENEDOR */
 #container {
   text-align: center;
   background: rgba(255, 255, 255, 0.1); /* fondo semitransparente */
@@ -19,6 +21,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
+/* TITULO */
 h1 {
   font-family: 'Pacifico', cursive; /* fuente cursiva y romántica */
   font-size: 36px;
@@ -27,6 +30,7 @@ h1 {
   text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
+/* BOTONES */
 #btnNo, #btnYes {
   background: linear-gradient(45deg, #ff6a95, #ff3366);
   color: #fff;
@@ -45,6 +49,7 @@ h1 {
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
+/* MENSAJE */
 #result {
   display: none;
   margin-top: 25px;
@@ -55,6 +60,7 @@ h1 {
   animation: fadeIn 1s ease forwards;
 }
 
+/* ANIMACIÓN */
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(-10px); }
   100% { opacity: 1; transform: translateY(0); }
