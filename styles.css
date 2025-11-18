@@ -1,6 +1,6 @@
 /* BODY */
 body {
-  font-family: 'Comic Sans MS', 'Arial', sans-serif; /* más juguetona y tierna */
+  font-family: 'Comic Sans MS', 'Arial', sans-serif; /* fuente juguetona y tierna */
   background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* degradado romántico */
   color: #fff;
   margin: 0;
@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* evita scroll cuando el botón se mueve */
 }
 
 /* CONTENEDOR */
@@ -19,6 +20,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
+  position: relative;
 }
 
 /* TITULO */
@@ -42,6 +44,7 @@ h1 {
   margin: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 #btnNo:hover, #btnYes:hover {
