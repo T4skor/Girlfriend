@@ -1,7 +1,7 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #36393f;
-  color: #ffffff;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif; /* más juguetona y tierna */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* degradado romántico */
+  color: #fff;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,27 +12,50 @@ body {
 
 #container {
   text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* fondo semitransparente */
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-family: 'Pacifico', cursive; /* fuente cursiva y romántica */
+  font-size: 36px;
+  color: #ff3366;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
 #btnNo, #btnYes {
-  background-color: #7289da;
-  color: #ffffff;
-  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff6a95, #ff3366);
+  color: #fff;
+  padding: 12px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
-  font-size: 16px;
-  margin-right: 20px;
+  font-size: 18px;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#btnNo:hover, #btnYes:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 #result {
   display: none;
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 25px;
+  font-size: 22px;
   color: #ff3366;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease forwards;
 }
 
-/* Optional: Add hover effect on buttons */
-#btnNo:hover, #btnYes:hover {
-  background-color: #677bc4;
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
